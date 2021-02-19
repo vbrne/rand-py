@@ -33,17 +33,22 @@ class Artifact {
 		}
 	}
 	
+	protected boolean isMainStat (String Stat_Name, String[] Possible_Main_Stats) {
+		for (int i = 0; i < Possible_Main_Stats.length; i++) 
+			if (Stat_Name.equals (Possible_Main_Stats[i])) return true;
+		return false;
+	}
+	
 	private boolean isSubStat (String Stat_Name) {
 		for (int i = 0; i < Possible_Sub_Stats.length; i++)
-			if (Stat_Name.equals (Possible_Sub_Stats[i])) return true;
+			if (Stat_Name.equals (Possible_Sub_Stats[i]) && !Stat_Name.equals(Main_Stat.Name)) return true;
 		return false;
 	}
 	
 	public void addSubstat (String Stat_Name, double Stat_Value) {
-		if (isSubStat (Stat_Name) && Stat_Index < 4) {
-			Sub_Stats[Stat_Index] = new Stat (Stat_Name, Stat_Value);
-			Stat_Index++;
-		}
+		if (isSubStat (Stat_Name) && Stat_Index < 4) Sub_Stats[Stat_Index] = new Stat (Stat_Name, Stat_Value);
+		else Sub_Stats[Stat_Index] = new Stat ();
+		Stat_Index++;
 	}
 	
 	public static void main (String[] args) {

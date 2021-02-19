@@ -4,8 +4,8 @@
  *	artifact-type specific.
 **/
 class Stat {
-	private final String Name;
-	private final double Value;
+	protected final String Name;
+	protected final double Value;
 	
 	void consolePrintStat() {
 		System.out.println (Name + " : " + Value);
@@ -14,5 +14,13 @@ class Stat {
 	public Stat (String name, double value) {
 		Name = name;
 		Value = value;
+	}
+	
+	/**
+	 * Garbage Stat; used to denote invalid or currupted stat
+	**/
+	public Stat () {
+		Name = "--";
+		Value = -999.999;
 	}
 }

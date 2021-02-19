@@ -18,15 +18,10 @@ public class Goblet extends Artifact {
 	};
 	
 	public Goblet (String Stat_Name, double Stat_Value) {
-		if (isMainStat (Stat_Name)) Main_Stat = new Stat (Stat_Name, Stat_Value); 
-		else Main_Stat = new Stat("-", 0);
+		if (isMainStat (Stat_Name, Possible_Main_Stats)) Main_Stat = new Stat (Stat_Name, Stat_Value); 
+		else Main_Stat = new Stat();
 	}
 	
-	private boolean isMainStat (String Stat_Name) {
-		for (int i = 0; i < Possible_Main_Stats.length; i++) 
-			if (Stat_Name.equals (Possible_Main_Stats[i])) return true;
-		return false;
-	}
 	
 	void consolePrintGoblet() {
 		System.out.println ("Goblet : ");
