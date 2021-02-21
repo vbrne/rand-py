@@ -13,7 +13,12 @@ public class Circlet extends Artifact {
 		"Healing Bonus"
 	};
 	
-	public Circlet (String Stat_Name, double Stat_Value) {
+	//public Circlet (String Stat_Name, double Stat_Value) {
+	//	if (isMainStat (Stat_Name, Possible_Main_Stats)) Main_Stat = new Stat (Stat_Name, Stat_Value); 
+	//	else Main_Stat = new Stat();
+	//}
+	
+	public void updateMainStat(String Stat_Name, double Stat_Value) {
 		if (isMainStat (Stat_Name, Possible_Main_Stats)) Main_Stat = new Stat (Stat_Name, Stat_Value); 
 		else Main_Stat = new Stat();
 	}
@@ -24,10 +29,10 @@ public class Circlet extends Artifact {
 	}
 	
 	public static void main (String[] args) {
-		Circlet Cir = new Circlet ("HP%", 12);
-		Cir.addSubstat ("CRIT Rate", 7.3);
-		Cir.addSubstat ("HP%", 11.1);
-		Cir.addSubstat ("HP" , 400);
-		Cir.consolePrintCirclet();
+		//Circlet Cir = new Circlet ("HP%", 12);
+		//Cir.addSubstat ("CRIT Rate", 7.3);
+		//Cir.addSubstat ("HP%", 11.1);
+		//Cir.addSubstat ("HP" , 400);
+		//Cir.consolePrintCirclet();
 	}
 }
