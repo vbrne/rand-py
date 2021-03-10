@@ -9,30 +9,30 @@ import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;	
-import java.awt.Insets;						// ?
+import java.awt.Insets;				// ?
 
-import java.text.DecimalFormat;			    // ? For formatting displayed data
+import java.text.DecimalFormat;			// ? For formatting displayed data
 
-import javax.swing.AbstractAction;			// ?
+import javax.swing.AbstractAction;		// ?
 import javax.swing.BorderFactory;
-import javax.swing.border.Border;			// ?
+import javax.swing.border.Border;		// ?
 import javax.swing.border.EmptyBorder;
-import javax.swing.BoxLayout;				// ?
-import javax.swing.Box;						// ?
+import javax.swing.BoxLayout;			// ?
+import javax.swing.Box;				// ?
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-import javax.swing.JMenuBar;				// ?
-import javax.swing.JMenu;					// ?
-import javax.swing.JMenuItem;				// ?
+import javax.swing.JMenuBar;			// ?
+import javax.swing.JMenu;			// ?
+import javax.swing.JMenuItem;			// ?
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
-import javax.swing.JSeparator;				// ?
-import javax.swing.JTable;					// ?
-import javax.swing.KeyStroke;				// ?
+import javax.swing.JSeparator;			// ?
+import javax.swing.JTable;			// ?
+import javax.swing.KeyStroke;			// ?
 import javax.swing.ScrollPaneConstants;		// ?
-import javax.swing.SwingConstants;			// ?
+import javax.swing.SwingConstants;		// ?
 import javax.swing.table.TableColumnModel;	// ?
 
 public class Gui {
@@ -44,10 +44,10 @@ public class Gui {
 	 *	directly modify each (i.e. Main
 	**/
 	private Circlet circlet	= new Circlet();
-	//private Goblet 	goblet	= new Goblet();
-	//private Sands 	sands	= new Sands();
-	//private Plume 	plume	= new Plume();
-	//private Flower 	flower	= new Flower();
+	//private Goblet goblet	= new Goblet();
+	//private Sands  sands	= new Sands();
+	//private Plume  plume	= new Plume();
+	//private Flower flower	= new Flower();
 	
 	public Gui() {
 		Frame();
@@ -70,29 +70,29 @@ public class Gui {
 	 * Panel for the Artifacts; Let me try to draw it out:
 	 *	
 	 *	|- JPanel --------------------------------------------|
-	 *	|  "Artifacts:"            							  |
-	 *	| 													  |
+	 *	|  "Artifacts:"            			      |
+	 *	| 						      |
 	 *	| |- Circlet Artifact JPanel -----------------------| |
-	 *	| |													| |
-	 *	| |  Circlet JLabel:                             	| |
-	 *	| |    Main-Stat JCombo Box : Main-Stat JTextField	| |
-	 *	| |		... 										| |
-	 *	| |    Sub-Stat4 JCombo Box : Sub-Stat4 JTextField	| |
-	 *	| |													| |
-	 *	| |-------------------------------------------------| |
-	 *	| 													  |
-	 *	| 	...												  |
-	 *	| 													  |
-	 *	| |- Flower Artifact JPanel ------------------------| |
-	 *	| |													| |
-	 *	| |  Flower JLabel:                             	| |
-	 *	| |    Main-Stat JCombo Box : Main-Stat JTextField 	| |
-	 *	| |		... 										| |
+	 *	| |						    | |
+	 *	| |  Circlet JLabel:                                | |
+	 *	| |    Main-Stat JCombo Box : Main-Stat JTextField  | |
+	 *	| |		... 				    | |
 	 *	| |    Sub-Stat4 JCombo Box : Sub-Stat4 JTextField  | |
-	 *	| |													| |
+	 *	| |						    | |
 	 *	| |-------------------------------------------------| |
-	 *	| 													  |
-	 *	| 									   Update Button  |
+	 *	| 						      |
+	 *	| 	...					      |
+	 *	| 						      |
+	 *	| |- Flower Artifact JPanel ------------------------| |
+	 *	| |						    | |
+	 *	| |  Flower JLabel:                                 | |
+	 *	| |    Main-Stat JCombo Box : Main-Stat JTextField  | |
+	 *	| |		... 				    | |
+	 *	| |    Sub-Stat4 JCombo Box : Sub-Stat4 JTextField  | |
+	 *	| |						    | |
+	 *	| |-------------------------------------------------| |
+	 *	| 						      |
+	 *	| 				       Update Button  |
 	 *	|-----------------------------------------------------|
 	 *
 	 * Each JPanel would need the objects stacked vertically,
@@ -105,24 +105,24 @@ public class Gui {
 	 *
 	 * Hierarchy:
 	 *  JPanel {
-	 *		Artifacts label
-	 *		SubPanel {
-	 *			circletPanel {
-	 *				mainStat label
-	 *				mainStatPanel {
-	 *					StatName; StatValue
-	 *				}
-	 *				SubStat label
-	 *				subStatPanels {
-	 *					Stat1Name; Stat1Value
-	 *					Stat2Name; Stat2Value
-	 *					Stat3Name; Stat3Value
-	 *					Stat4name; Stat4Value
-	 *				}
-	 *			} x4 for Goblet, Sands, Plume, Flower1
-	 *			update button (can go here or in main panel)
-	 *		}
+	 *	Artifacts label
+	 *	SubPanel {
+	 *		circletPanel {
+	 *			mainStat label
+	 *			mainStatPanel {
+	 *				StatName; StatValue
+	 *			}
+	 *			SubStat label
+	 *			subStatPanels {
+	 *				Stat1Name; Stat1Value
+	 *				Stat2Name; Stat2Value
+	 *				Stat3Name; Stat3Value
+	 *				Stat4name; Stat4Value
+	 *			}
+	 *		} x4 for Goblet, Sands, Plume, Flower1
+	 *		update button (can go here or in main panel)
 	 *	}
+	 * }
 	 *
 	 * Everything is split up so it can look nice
 	 *
@@ -131,7 +131,7 @@ public class Gui {
 		JPanel panel = new JPanel ();
 		panel.setLayout (new BorderLayout());
 		panel.setBorder (new EmptyBorder (new Insets (5, 5, 5, 5)));	// Adds nice cushion around panel
-		JLabel title = new JLabel ("Artifacts:");						// "Title" label
+		JLabel title = new JLabel ("Artifacts:");			// "Title" label
 		panel.add (BorderLayout.NORTH, title);
 		
 		JPanel subPanel = ArtifactSubPanel();
@@ -140,7 +140,7 @@ public class Gui {
 		frame.getContentPane().add (BorderLayout.CENTER, panel);
 	}
 	private JPanel ArtifactSubPanel() {
-		JPanel subPanel = new JPanel ();								// Sub Panel for Artifact Set
+		JPanel subPanel = new JPanel ();				// Sub Panel for Artifact Set
 		subPanel.setLayout (new BoxLayout (subPanel, BoxLayout.Y_AXIS));// Layout to align vertically
 
 		subPanel.add (circletPanel());

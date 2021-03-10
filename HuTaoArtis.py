@@ -1,12 +1,12 @@
 print()
 set = {
 	'circlet' : {
-		'CRIT_Rate' : 31.1,	# CR Circlet we already have
-		#'CRIT_DMG' : 62.2,	# Hypothetical CD Circlet
+		#'CRIT_Rate' : 31.1,	# CR Circlet we already have
+		'CRIT_DMG' : 62.2,	# Hypothetical CD Circlet
 		'HP' : 478,
 		'HPP' : 8.2,
-		'CRIT_DMG' : 27.2,	# CR Circlet we already have
-		#'CRIT_Rate' : 7.4,	# Hypothetical CD Circlet
+		#'CRIT_DMG' : 27.2,	# CR Circlet we already have
+		'CRIT_Rate' : 7.4,	# Hypothetical CD Circlet
 		'DEF' : 19
 	},
 	'goblet' : {
@@ -51,7 +51,7 @@ print ("Base Product : " + str(round(CRIT_DMG * CRIT_Rate, 2)))
 print()
 
 DM_CRIT_Rate = 36.8	# Deathmatch CRIT_Rate @lv.90
-BC_CRIT_DMG = 55.1	# Blackcliff CRIT_DMG @lv.90
+BC_CRIT_DMG = 66.2	# Blackcliff CRIT_DMG @lv.90
 
 print ("DM Pole CRIT_DMG = " + str(round(CRIT_DMG, 2)))
 print ("DM Pole CRIT_Rate = " + str(round(CRIT_Rate + DM_CRIT_Rate, 2)))
